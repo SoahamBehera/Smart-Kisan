@@ -1,0 +1,55 @@
+.downloadSection {
+    background: linear-gradient(135deg, hsl(var(--color-primary)) 0%, hsl(160, 100%, 30%) 100%);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.desc {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.badgeContainer {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.storeBadge {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.storeBadge:hover {
+    transform: translateY(-2px);
+}
+
+.storeText small {
+    display: block;
+    font-size: 0.7rem;
+}
+
+.storeText strong {
+    font-size: 1.1rem;
+}

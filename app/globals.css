@@ -1,26 +1,80 @@
-@import "tailwindcss";
-
+/* Global Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Brand Colors - Emerald/Teal for Agritech */
+  --color-primary: 150, 60%, 40%;    /* #29a36f - Trustworthy Green */
+  --color-secondary: 45, 90%, 55%;   /* #f5c414 - Harvest Gold (Highlight) */
+  --color-accent: 200, 70%, 50%;     /* #269fde - Water/Tech Blue */
+  
+  /* Neutral Colors */
+  --color-bg-light: 0, 0%, 98%;      /* #fafafa */
+  --color-bg-white: 0, 0%, 100%;     /* #ffffff */
+  --color-text-main: 210, 20%, 20%;  /* #29323d */
+  --color-text-light: 210, 10%, 55%; /* #7e8791 */
+  
+  /* Dark Mode Colors (can be toggled later) */
+  --color-bg-dark: 210, 25%, 12%;    /* #171e26 */
+  --color-card-dark: 210, 25%, 18%;  /* #222c38 */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 80px;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: hsl(var(--color-bg-light));
+  color: hsl(var(--color-text-main));
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
 }

@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: hsl(var(--color-bg-white));
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(var(--color-primary));
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.navLinks {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.navLink {
+    color: hsl(var(--color-text-main));
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: hsl(var(--color-primary));
+}
+
+.ctaButton {
+    background-color: hsl(var(--color-primary));
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.ctaButton:hover {
+    background-color: hsl(var(--color-primary) / 0.9);
+}
+
+/* Mobile responsive basics */
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        /* Todo: Hamburger menu */
+    }
+}

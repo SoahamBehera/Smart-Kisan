@@ -1,0 +1,92 @@
+.hero {
+    background: linear-gradient(135deg, hsl(var(--color-bg-light)) 0%, #e0f2fe 100%);
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: list-item;
+    /* Wait, grid is better */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.textContent {
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    background: hsl(var(--color-primary) / 0.1);
+    color: hsl(var(--color-primary));
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+    color: hsl(var(--color-text-main));
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: hsl(var(--color-text-light));
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.imageContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.heroImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    transform: rotate(-2deg);
+    transition: transform 0.3s;
+}
+
+.heroImage:hover {
+    transform: rotate(0deg);
+}
+
+@media (max-width: 960px) {
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .textContent {
+        margin: 0 auto;
+    }
+
+    .buttonGroup {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}

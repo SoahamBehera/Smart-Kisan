@@ -1,0 +1,54 @@
+.stepsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.stepNumber {
+    width: 40px;
+    height: 40px;
+    background-color: hsl(var(--color-primary));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.stepTitle {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    color: hsl(var(--color-text-main));
+}
+
+.stepDesc {
+    color: hsl(var(--color-text-light));
+    font-size: 0.95rem;
+}
+
+/* Connecting line (desktop only) */
+@media (min-width: 768px) {
+    .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: hsl(var(--color-primary) / 0.2);
+        z-index: 1;
+    }
+}

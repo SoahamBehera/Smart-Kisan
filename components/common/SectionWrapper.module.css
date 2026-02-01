@@ -1,0 +1,28 @@
+.section {
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Backgrounds */
+.white {
+    background-color: hsl(var(--color-bg-white));
+}
+
+.light {
+    background-color: hsl(var(--color-bg-light));
+}
+
+.dark {
+    background-color: hsl(var(--color-bg-dark));
+    color: white;
+}
+
+.primary {
+    background-color: hsl(var(--color-primary));
+    color: white;
+}
