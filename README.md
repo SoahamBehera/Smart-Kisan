@@ -284,6 +284,25 @@ We welcome contributions to make SmartKisan even better!
 - 📱 **Native Mobile Apps** - iOS and Android applications
 - 🏦 **Financial Services** - Micro-loans and credit access
 
+## 🚀 Deployment
+
+### **Deploy on Vercel (Recommended)**
+
+The easiest way to deploy this Next.js application:
+
+1. Push your code to GitHub
+2. Visit [vercel.com](https://vercel.com)
+3. Click "Import Project" and select your repository
+4. Vercel automatically detects Next.js and deploys
+5. Get a live URL in ~1 minute!
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SoahamBehera/Smart-Kisan)
+
+### **Other Platforms**
+- **Netlify** - Supports Next.js with automatic builds
+- **AWS Amplify** - Enterprise-grade deployment
+- **Self-hosted** - Use `npm run build` and `npm start`
+
 ## 🙏 Acknowledgments
 
 - **Indian Council of Agricultural Research (ICAR)** - Domain expertise
